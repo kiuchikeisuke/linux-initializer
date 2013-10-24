@@ -37,6 +37,7 @@ ln -s /usr/local/lib/${SCALA_VER} /usr/local/scala
 echo "# scala" >> ~/.profile
 echo "export SCALA_HOME=/usr/local/scala" >> ~/.profile
 echo "export PATH=\$PATH:\$SCALA_HOME/bin" >> ~/.profile
+echo "install scala finished"
 
 echo "init finished!!"
 
