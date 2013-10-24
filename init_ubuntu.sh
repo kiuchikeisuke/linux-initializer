@@ -38,5 +38,12 @@ echo "# scala" >> ~/.profile
 echo "export SCALA_HOME=/usr/local/scala" >> ~/.profile
 echo "export PATH=\$PATH:\$SCALA_HOME/bin" >> ~/.profile
 
-echo "init finished!!"
+#
+#5. install Emacs
+#
+add-apt-repository ppa:cassou/emacs
+apt-get update
+apt-get install -y emacs24 emacs24-el
+echo "install Emacs finished"
 
+echo "init finished!!"
