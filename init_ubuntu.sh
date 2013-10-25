@@ -47,4 +47,20 @@ apt-get update
 apt-get install -y emacs24 emacs24-el
 echo "install Emacs finished"
 
+#
+#6. install sbt
+#
+SBT_VER=0.13.0
+wget http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/${SBT_VER}/sbt-launch.jar
+if [ ! -e ~/bin ]; then
+mkdir ~/bin
+fi
+mv -u sbt-launch.jar ~/bin/
+if [ ! -e ~/bin/sbt ]; then
+echo "SBT_OPTS=\"-Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M\"" >> ~/bin/sbt
+echo "java \$SBT_OPTS -jar \`dirname \$0\`/sbt-launch.jar \"\$@\"" >> ~/bin/sbt
+chmod u+x ~/bin/sbt
+fi
+echo "init sbt finished"
+
 echo "init finished!!"
