@@ -54,6 +54,7 @@ SBT_VER=0.13.0
 wget http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/${SBT_VER}/sbt-launch.jar
 if [ ! -e ~/bin ]; then
 mkdir ~/bin
+echo "export PATH=\$PATH:~/bin" >> ~/.profile
 fi
 mv -u sbt-launch.jar ~/bin/
 if [ ! -e ~/bin/sbt ]; then
@@ -62,5 +63,15 @@ echo "java \$SBT_OPTS -jar \`dirname \$0\`/sbt-launch.jar \"\$@\"" >> ~/bin/sbt
 chmod u+x ~/bin/sbt
 fi
 echo "init sbt finished"
+
+#
+#7. install conscript
+#
+if [ ! -e ~/bin ]; then
+mkdir ~/bin
+echo "export PATH=\$PATH:~/bin" >> ~/.profile
+fi
+curl https://raw.github.com/n8han/conscript/master/setup.sh | sh
+echo "conscript finished"
 
 echo "init finished!!"
