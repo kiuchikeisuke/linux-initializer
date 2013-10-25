@@ -30,8 +30,8 @@ tar xvzf ${SCALA_VER}.tgz
 mv ${SCALA_VER} /usr/local/lib/
 ln -s /usr/local/lib/${SCALA_VER} /usr/local/scala 
 echo "# scala" >> ~/.profile
-echo "export SCALA_HOME=/usr/local/scala" >> ~/.profile
-echo "export PATH=\$PATH:\$SCALA_HOME/bin" >> ~/.profile
+echo "SCALA_HOME=/usr/local/scala" >> ~/.profile
+echo "PATH=\$PATH:\$SCALA_HOME/bin" >> ~/.profile
 echo "install scala finished"
 
 #
@@ -49,7 +49,7 @@ SBT_VER=0.13.0
 wget http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/${SBT_VER}/sbt-launch.jar
 if [ ! -e ~/bin ]; then
 mkdir ~/bin
-echo "export PATH=\$PATH:~/bin" >> ~/.profile
+echo "PATH=\$PATH:~/bin" >> ~/.profile
 fi
 mv -u sbt-launch.jar ~/bin/
 if [ ! -e ~/bin/sbt ]; then
@@ -64,7 +64,7 @@ echo "install sbt finished"
 #
 if [ ! -e ~/bin ]; then
 mkdir ~/bin
-echo "export PATH=\$PATH:~/bin" >> ~/.profile
+echo "PATH=\$PATH:~/bin" >> ~/.profile
 fi
 curl https://raw.github.com/n8han/conscript/master/setup.sh | sh
 echo "install conscript finished"
