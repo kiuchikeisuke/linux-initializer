@@ -69,4 +69,9 @@ fi
 curl https://raw.github.com/n8han/conscript/master/setup.sh | sh
 echo "conscript finished"
 
+#
+#8. install giter8
+#
+cs n8han/giter8
+
 echo "init finished!!"
