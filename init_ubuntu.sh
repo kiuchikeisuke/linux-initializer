@@ -41,7 +41,7 @@ echo "export PATH=\$PATH:\$SCALA_HOME/bin" >> ~/.profile
 #
 #5. install Emacs
 #
-add-apt-repository ppa:cassou/emacs
+add-apt-repository -y ppa:cassou/emacs
 apt-get update
 apt-get install -y emacs24 emacs24-el
 echo "install Emacs finished"
