@@ -57,7 +57,7 @@ echo "SBT_OPTS=\"-Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:Max
 echo "java \$SBT_OPTS -jar \`dirname \$0\`/sbt-launch.jar \"\$@\"" >> ~/bin/sbt
 chmod u+x ~/bin/sbt
 fi
-echo "init sbt finished"
+echo "install sbt finished"
 
 #
 #7. install conscript
@@ -67,11 +67,12 @@ mkdir ~/bin
 echo "export PATH=\$PATH:~/bin" >> ~/.profile
 fi
 curl https://raw.github.com/n8han/conscript/master/setup.sh | sh
-echo "conscript finished"
+echo "install conscript finished"
 
 #
 #8. install giter8
 #
 cs n8han/giter8
+echo "install giter8 finished"
 
 echo "init finished!!"
